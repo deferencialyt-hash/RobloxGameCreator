@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Game Creator</title>
+<style>
+    /* --- Сброс и базовые стили --- */
+    body, html { margin:0; padding:0; font-family:'Arial',sans-serif; background:#1b1b1b; color:#f0f0f0; scroll-behavior: smooth;}
+    a { text-decoration:none; color: inherit; }
+
+    /* --- Header --- */
+    header { background: linear-gradient(90deg,#182848,#4b6cb7); padding:30px 20px; text-align:center; }
+    header h1 { font-size:3em; margin:0; color:#fff; animation:fadeIn 1.5s ease-in; }
+    @keyframes fadeIn { 0% {opacity:0; transform:translateY(-20px);} 100%{opacity:1; transform:translateY(0);} }
+
+    /* --- Navigation --- */
+    nav { display:flex; justify-content:center; background:#2c2c2c; flex-wrap:wrap; }
+    nav a { padding:15px 25px; font-weight:bold; transition:0.3s; color:#f0f0f0; }
+    nav a:hover { background:#4b6cb7; border-radius:5px; }
+
+    /* --- Main Sections --- */
+    main { max-width:1000px; margin:40px auto; padding:0 20px; }
+    section { margin-bottom:60px; opacity:0; transform:translateY(20px); animation:fadeUp 1s forwards; }
+    section:nth-of-type(1) { animation-delay:0.2s; }
+    section:nth-of-type(2) { animation-delay:0.4s; }
+    section:nth-of-type(3) { animation-delay:0.6s; }
+    section:nth-of-type(4) { animation-delay:0.8s; }
+    section:nth-of-type(5) { animation-delay:1s; }
+
+    @keyframes fadeUp { to { opacity:1; transform:translateY(0);} }
+
+    h2 { color:#4b6cb7; margin-bottom:15px; }
+
+    p, li { line-height:1.6; }
+
+    .highlight { color:#ffdd57; font-weight:bold; }
+    .important { background:#ff5722; color:#fff; padding:3px 8px; border-radius:4px; font-weight:bold; }
+
+    ul { padding-left:20px; }
+
+    /* --- Карточки для UGC и обновлений --- */
+    .cards { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .card { background:#2c2c2c; padding:20px; border-radius:10px; flex:1 1 250px; max-width:300px; transition:0.3s; cursor:pointer; }
+    .card:hover { transform:scale(1.05); background:#4b6cb7; }
+    .card h3 { margin-top:0; color:#fff; }
+    .card p { margin-bottom:0; }
+
+    /* --- Кнопки --- */
+    .button { display:inline-block; padding:15px 25px; margin-top:15px; background:#4b6cb7; color:#fff; font-weight:bold; border-radius:5px; transition:0.3s; }
+    .button:hover { background:#182848; }
+
+    /* --- Footer --- */
+    footer { background:#2c2c2c; text-align:center; padding:20px; color:#ccc; }
+
+    /* --- Адаптив --- */
+    @media(max-width:700px){ .cards { flex-direction:column; align-items:center; } }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Roblox Game Creator</h1>
+</header>
+
+<nav>
+    <a href="#about">Про игру</a>
+    <a href="#updates">Обновления</a>
+    <a href="#purchase">Покупка</a>
+    <a href="#events">Ивенты</a>
+    <a href="#contact">Контакты</a>
+</nav>
+
+<main>
+
+<!-- --- Про игру --- -->
+<section id="about">
+    <h2>Описание игры</h2>
+    <p>В <span class="highlight">Roblox Game Creator</span> вы создаете свои собственные игры в Roblox. За активность вы получаете <span class="highlight">очки опыта</span> и <span class="highlight">деньги</span>, на которые можно покупать улучшения.</p>
+    <p>Игра постоянно обновляется: примерно <span class="highlight">2 раза в неделю</span> выходят исправления багов, новые пасхалки, включая пасхалку <span class="important">Minecraft</span>.</p>
+</section>
+
+<!-- --- Обновления --- -->
+<section id="updates">
+    <h2>Обновления и пасхалки</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Еженедельные исправления</h3>
+            <p>Убираем баги и лаги для комфортной игры.</p>
+        </div>
+        <div class="card">
+            <h3>Новые пасхалки</h3>
+            <p>Секреты и скрытые объекты для исследователей.</p>
+        </div>
+        <div class="card">
+            <h3>Промо и UGC</h3>
+            <p>Каждые 10к визитов — новые достижения и валютa, 100к визитов — оригинальные предметы UGC.</p>
+        </div>
+    </div>
+</section>
+
+<!-- --- Покупка --- -->
+<section id="purchase">
+    <h2>Покупка игры</h2>
+    <p>Игру можно приобрести за <span class="highlight">10 000 долларов</span> или <span class="highlight">11 130 849 робуксов</span>.</p>
+    <p>Для покупки и вопросов обратитесь в Telegram: <a href="https://t.me/DimaASK_Support_bot" target="_blank">@DimaASK_Support_bot</a></p>
+    <a href="https://t.me/DimaASK_Support_bot" target="_blank" class="button">Связаться для покупки</a>
+</section>
+
+<!-- --- Ивенты --- -->
+<section id="events">
+    <h2>Ивенты и достижения</h2>
+    <ul>
+        <li>10 000 визитов — промо, супер обновление, 5 достижений и 50 000 игровых долларов для всех</li>
+        <li>100 000 визитов — выпуск оригинальных UGC предметов (футболки, шляпы и т.д.)</li>
+        <li>10 000 000 визитов — реальный сайт и Telegram-бот с мерчем по всему миру</li>
+    </ul>
+</section>
+
+<!-- --- Контакты --- -->
+<section id="contact">
+    <h2>Контакты</h2>
+    <p>Все вопросы и предложения: <a href="https://t.me/DimaASK_Support_bot" target="_blank">@DimaASK_Support_bot</a></p>
+</section>
+
+</main>
+
+<footer>
+    &copy; 2026 Roblox Game Creator. Все права защищены.
+</footer>
+
+</body>
+</html>
